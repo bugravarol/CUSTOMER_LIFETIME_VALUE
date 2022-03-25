@@ -35,7 +35,6 @@ pd.read_sql_query("show tables", conn)
 
 pd.read_sql_query("select * from online_retail_2010_2011 limit 10", conn)
 retail_mysql_df = pd.read_sql_query("select * from online_retail_2010_2011", conn)
-retail_mysql_df = pd.read_sql_query("select * from online_retail_2010_2011", conn)
 df = retail_mysql_df.copy()
 
 # Select UK customers.
