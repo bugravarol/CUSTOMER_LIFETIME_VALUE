@@ -60,7 +60,7 @@ def replace_with_thresholds(dataframe, variable):
     dataframe.loc[(dataframe[variable] > up_limit), variable] = up_limit
 
 ############################
-# FEDA & PREP
+# EDA & PREP
 ############################
 
 df.describe().T
@@ -181,7 +181,7 @@ cltv = ggf.customer_lifetime_value(bgf,
                                    cltv_df['recency'],
                                    cltv_df['T'],
                                    cltv_df['monetary'],
-                                   time=1,  # for 6 months
+                                   time=1,  # for 1 months
                                    freq="W",  # Frequency of T.
                                    discount_rate=0.01)
 
@@ -217,8 +217,8 @@ cltv_6_month = ggf.customer_lifetime_value(bgf,
                                    cltv_df['recency'],
                                    cltv_df['T'],
                                    cltv_df['monetary'],
-                                   time=6,  # 6 aylık
-                                   freq="W",  # T'nin frekans bilgisi.
+                                   time=6,  # for 6 months
+                                   freq="W",  # Frequency of T.
                                    discount_rate=0.01)
 
 cltv_6_month=cltv_6_month.reset_index()
