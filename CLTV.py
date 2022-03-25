@@ -69,6 +69,7 @@ df = df[df["Quantity"] > 0]
 df = df[df["Price"] > 0]
 df.columns
 
+# Suppressing outliers
 replace_with_thresholds(df, "Quantity")
 replace_with_thresholds(df, "Price")
 
