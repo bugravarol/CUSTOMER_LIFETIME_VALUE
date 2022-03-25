@@ -109,14 +109,14 @@ bgf.fit(cltv_df['frequency'],
         cltv_df['recency'],
         cltv_df['T'])
 
-# Top 10 customers we expect to purchase the most in a week
+# Top 20 customers we expect to purchase the most in a week
 cltv_df['expected_purc_1_week'] = bgf.conditional_expected_number_of_purchases_up_to_time(1,
                                                         cltv_df['frequency'],
                                                         cltv_df['recency'],
                                                         cltv_df['T']).sort_values(ascending=False)
 cltv_df.sort_values("expected_purc_1_week", ascending=False).head(20)
 
-# Top 10 customers we expect to purchase the most in a month
+# Top 20 customers we expect to purchase the most in a month
 cltv_df['expected_purc_1_month'] = bgf.conditional_expected_number_of_purchases_up_to_time(4,
                                                         cltv_df['frequency'],
                                                         cltv_df['recency'],
